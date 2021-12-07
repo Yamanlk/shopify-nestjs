@@ -22,5 +22,9 @@
   "peerDependencies": {
     "@nestjs/common": "^8.2.0",
     "@shopify/shopify-api": "^2.0.0"
+  },
+  "repository": {
+    "url": "https://github.com/Yamanlk/shopify-nestjs",
+    "type": "git"
   }
 }

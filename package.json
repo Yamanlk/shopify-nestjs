@@ -1,5 +1,5 @@
 {
-  "name": "nestjs-shopify-client",
+  "name": "shopify-nestjs",
   "version": "1.0.0",
   "description": "This libarary provides Shopify clients for NestJS applications",
   "main": "dist/index.js",

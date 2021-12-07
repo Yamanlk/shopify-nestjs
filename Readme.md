@@ -22,14 +22,14 @@ It wraps the official shopify-node-api library in nestjs modules and services.
 First you neeed to install all peer dependencies
 
 - `@shopify/shopify-api`— official shopify library
-- `nestjs-shopify-client`— this library
+- `shopify-nestjs`— this library
 - `@nestjs/common`— should be installed by default
 
 <details>
   <summary>Using npm</summary>
 
 ```shell
-$ npm install nestjs-shopify-client @shopify/shopify-api
+$ npm install shopify-nestjs @shopify/shopify-api
 ```
 
 </details>
@@ -38,7 +38,7 @@ $ npm install nestjs-shopify-client @shopify/shopify-api
   <summary>Using yarn</summary>
 
 ```shell
-$ yarn add nestjs-shopify-client @shopify/shopify-api
+$ yarn add shopify-nestjs @shopify/shopify-api
 ```
 
 </details>
@@ -47,7 +47,7 @@ $ yarn add nestjs-shopify-client @shopify/shopify-api
   <summary>Using pnpm</summary>
 
 ```shell
-$ pnpm install nestjs-shopify-client @shopify/shopify-api
+$ pnpm install shopify-nestjs @shopify/shopify-api
 ```
 
 </details>
@@ -121,6 +121,9 @@ Go to your app module and import the ShopifyModule using `forRoot` or `forRootAs
 You can import each client when you need it using `forFeature`
 
 ```typescript
+...
+import { ShopifyRestClientModule } from "shopify-nestjs"
+...
 @Module({
     ...
     imports: [
@@ -135,6 +138,9 @@ You can import each client when you need it using `forFeature`
 You can also import all clients and use them across your application using `ShopifyClientsModule.forRoot` in your App module
 
 ```typescript
+...
+import { ShopifyClientsModule } from "shopify-nestjs"
+...
 @Module({
     ...
     imports: [
@@ -151,6 +157,9 @@ You can also import all clients and use them across your application using `Shop
 Once a client is available in you module you can inject it directly and use it each client extends the shopify official library client so you can use it as documented [The official library readme](https://github.com/Shopify/shopify-node-api).
 
 ```typescript
+...
+import { ShopifyRestClient, ShopifyGraphqlClient, ShopifyStorefrontClient } from "shopify-nestjs"
+...
   constructor(
     ...
     private _restClient: ShopifyRestClient,

@@ -1,0 +1,26 @@
+{
+  "name": "nestjs-shopify-client",
+  "version": "1.0.0",
+  "description": "This libarary provides Shopify clients for NestJS applications",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "nestjs",
+    "shopify"
+  ],
+  "author": "yaman lakis",
+  "license": "MIT",
+  "devDependencies": {
+    "@nestjs/common": "^8.2.0",
+    "@shopify/shopify-api": "^2.0.0",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^8.2.0",
+    "@shopify/shopify-api": "^2.0.0"
+  }
+}

@@ -30,6 +30,7 @@ export class ShopifyModule {
       global: true,
       imports: options.imports,
       providers: this._createAsyncProviders(options),
+      exports: [SHOPIFY_MODULE_OPTIONS],
     };
   }
 
